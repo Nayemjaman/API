@@ -31,6 +31,17 @@ ALLOWED_HOSTS = []
 
 # Application definition
 
+
+#CUSTOMS APP
+CUSTOM_APPS = [
+        'api',
+    'accounts',
+
+    'rest_framework',
+    'knox',
+
+]
+
 INSTALLED_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
@@ -38,15 +49,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-
-
-    'api',
-    'accounts',
-
-    'rest_framework',
-    'knox',
-
-]
+] + CUSTOM_APPS
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
