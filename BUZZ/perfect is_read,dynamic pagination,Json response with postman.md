@@ -1,4 +1,4 @@
-#models
+# models
 
 from django.db import models
 
@@ -37,7 +37,7 @@ class Notification(models.Model):
         return str(self.id)
 
 
-#views
+# views
 
 
 from rest_framework import generics, status
@@ -142,6 +142,7 @@ class NotificationDetailView(generics.RetrieveAPIView):
         }
         return Response(result)
 
+# Urls
 
 urlpatterns = [
     path('notification/', NotificationCreateView.as_view(),
@@ -153,5 +154,5 @@ urlpatterns = [
 
 ]
 
-#dynamic pagination.
+# dynamic pagination.
 http://127.0.0.1:8000/notification/77/?page=2&limit=2
